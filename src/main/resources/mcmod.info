@@ -1,0 +1,16 @@
+[
+{
+  "modid": "duelsdeobf",
+  "name": "Duels Deobfuscator",
+  "description": "Hypixel Mod which removes the obfuscated names while queuing",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["rnss"],
+  "credits": "ross :)",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
