@@ -1,5 +1,5 @@
 # duels-deobfuscator
-Simple Hypixel mod that removes the chat obfuscation of player's names, when they join and leave Duel's games.
+Simple Hypixel mod that removes the chat obfuscation of player's names, when they join and leave Duels games.
 
 # commands
 /duelsdeobfuscator - toggles the mod
