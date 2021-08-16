@@ -1,7 +1,7 @@
 package com.rnss.duelsdeobf.commands;
 
 import com.rnss.duelsdeobf.Deobfuscator;
-import net.minecraft.client.Minecraft;
+import com.rnss.duelsdeobf.Utils;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.CommandException;
 import net.minecraft.command.ICommandSender;
@@ -26,7 +26,15 @@ public class DeobfToggleCommand extends CommandBase {
 
     @Override
     public void processCommand(ICommandSender sender, String[] args) throws CommandException {
-        Deobfuscator.getInstance().setEnabled(!Deobfuscator.getInstance().isEnabled());
-        Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText("Duels Deobfuscator set to: " + (Deobfuscator.getInstance().isEnabled() == false ? EnumChatFormatting.DARK_RED : EnumChatFormatting.DARK_GREEN) + Deobfuscator.getInstance().isEnabled()));
+        Deobfuscator deobfuscator = Utils.deobfuscator;
+        deobfuscator.setEnabled(!deobfuscator.isEnabled());
+        Boolean enabled = deobfuscator.isEnabled();
+        EnumChatFormatting formatColour = (enabled ? EnumChatFormatting.DARK_GREEN : EnumChatFormatting.DARK_RED);
+
+        Utils.minecraft.thePlayer.addChatMessage(
+                new ChatComponentText(
+                        "Duels Deobfuscator set to: " + formatColour + enabled
+                )
+        );
     }
 }
